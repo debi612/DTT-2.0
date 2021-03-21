@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.testng', name: 'testng', version: '7.1.0'
+    testImplementation group: 'org.testng', name: 'testng', version: '7.1.0'
+    implementation("io.github.bonigarcia:webdrivermanager:4.3.1")
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '3.9'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+    testImplementation 'io.rest-assured:rest-assured:4.3.3'
+    testImplementation 'io.rest-assured:json-path:4.3.3'
+    implementation 'io.rest-assured:rest-assured:4.3.3'
+    implementation 'io.rest-assured:json-path:4.3.3'
+    implementation group: 'com.aventstack', name: 'extentreports', version: '5.0.7'
+
+}
+
+test {
+    useTestNG() {
+        useDefaultListeners = true
+    }
+    reports.html.enabled = false
+}

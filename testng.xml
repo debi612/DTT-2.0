@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="com.dtt.listeners.ListenerClass"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true"
+          name="test" thread-count="1"  parallel="methods">
+        <classes>
+            <class name="com.dtt.tests.SignUp">
+            </class>
+        </classes>
+    </test>
+</suite>
