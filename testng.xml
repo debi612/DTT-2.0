@@ -8,6 +8,9 @@
           name="test" thread-count="1"  parallel="methods">
         <classes>
             <class name="com.dtt.tests.SignUp">
+                <methods>
+                    <include name="verifyDefaultLoginPage" />
+                </methods>
             </class>
         </classes>
     </test>
